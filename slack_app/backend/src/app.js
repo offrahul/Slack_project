@@ -1,0 +1,16 @@
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import connectDB from "./config/db.js";
+import authRoutes from "./router/authRoutes.js";
+import messageRoutes from "./router/messageRoutes.js";
+import { startScheduler } from "./utils/scheduler.js";
+dotenv.config();
+connectDB();
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use("/api/auth", authRoutes);
+app.use("/api/messages", messageRoutes);
+startScheduler();
+export default app;

@@ -1,0 +1,1 @@
+{"root":["./app.ts","./scheduler.ts","./server.ts","./config/db.ts","./models/scheduledmessage.ts","./models/token.ts","./router/authroutes.ts","./router/messageroutes.ts","./utils/scheduler.ts","./utils/slackapi.ts"],"errors":true,"version":"5.9.2"}
